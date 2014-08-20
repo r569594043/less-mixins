@@ -397,35 +397,35 @@
 }
 
 
-// learn from @大树
+// learn from @树残由尔
 .responsive-wrapper() {
   // 1.5em = 24px
-  @defaultSize:24em/16;
+  @baseFontSize:24/16em;
   // unit width
   @unit:40px;
   // (>=640px) -> 640px
   @media screen and (min-width: @unit * 16px) {
-    font-size: @defaultSize; // 1.5em - 24px
+    font-size: @baseFontSize; // 1.5em - 24px
   }
   // (>=540px <640px) -> 540px
   @media screen and (max-width: @unit * 16 - 1px) {
-    font-size: @defaultSize * (540/640); // 1.265625em - 20.25px
+    font-size: @baseFontSize * (540/640); // 1.265625em - 20.25px
   }
   // (>=480px <540px) -> 480px
   @media screen and (max-width: @unit * 13 + 20 - 1px) {
-    font-size: @defaultSize * (480/640); // 1.125em - 18px
+    font-size: @baseFontSize * (480/640); // 1.125em - 18px
   }
   // (>=400px <480px) -> 400px
   @media screen and (max-width: @unit * 12 - 1px) {
-    font-size: @defaultSize * (400/640); // 0.9375em - 15px
+    font-size: @baseFontSize * (400/640); // 0.9375em - 15px
   }
   // (>=360px <400px) -> 360px
   @media screen and (max-width: @unit * 10 - 1px) {
-    font-size: @defaultSize * (360/640); // 0.84375em - 13.5px
+    font-size: @baseFontSize * (360/640); // 0.84375em - 13.5px
   }
   // (<360px) -> 320px
   @media screen and (max-width: @unit * 9 - 1px) { // ( ,400) - 320px
-    font-size: @defaultSize * (320/640); // 0.75em - 12px
+    font-size: @baseFontSize * (320/640); // 0.75em - 12px
   }
 }
 
