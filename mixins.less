@@ -98,7 +98,7 @@
     visibility: hidden;
     display: block;
     font-size: 0;
-    content: " ";
+    content: ".";
     clear: both;
     height: 0;
   }
@@ -396,6 +396,39 @@
           user-select: @select;
 }
 
+// Apple iPhone 3GS 320x480 dpr:1
+// Apple iPhone 4 320x480 dpr:2
+// Apple iPhone 5 320x568 dpr:2
+// Apple iPhone 6 375x667 dpr:2
+// Apple iPhone 6 Plus 414x736 dpr:3
+// BlackBerry Z10 384x640 dpr:2
+// BlackBerry Z30 360x640 dpr:2
+// Google Nexus 4 384x640 dpr:2
+// Google Nexus 5 360x640 dpr:3
+// Google Nexus S 320x533 dpr:1.5
+// HTC Evo,Touch HD,Desire HD,Desire 320x533 dpr:1.5
+// HTC One X,EVO LTE 360x640 dpr:2
+// HTC Sensation,EVO 3D 360x640 dpr:1.5
+// LG Optimus 2X,Optimus 3D,Optimus Black 320x533 dpr:1.5
+// LG Optimus G 384x640 dpr:2
+// LG Optimus LTE,Optimus 4X HD 424x753 dpr:1.7
+// LG Optimus One 213x320 dpr:1.5
+// Motorola Defy,Droid,Droid X,Milestone 320x569 dpr:1.5
+// Motorola Droid 3,Droid 4,Droid Razr,Atrix 4G,Atrix 2 540x960 dpr:1
+// Motorola Droid Razr HD 720x1280 dpr:1
+// Nokia C5,C6,C7,N97,N8,X7 360x640 dpr:1
+// Nokia Lumia 7X0,Lumia 8XX,Lumia 900,N800,N810,N900 320x533 dpr:1.5
+// Samsung Galaxy Note 400x640 dpr:2
+// Samsung Galaxy Note 3 360x640 dpr:3
+// Samsung Galaxy Note II 360x640 dpr:2
+// Samsung Galaxy S III,Galaxy Nexus 360x640 dpr:2
+// Samsung Galaxy S,S II,W 320x533 dpr:1.5
+// Samsung Galaxy S4 360x640 dpr:3
+// Sony Xperia S,Ion 360x640 dpr:2
+// Sony Xperia Sola,U 480x854 dpr:1
+// Sony Xperia Z,Z1 360x640 dpr:3
+// 
+// 魅族 MX3 432x720(598) dpr:2.5
 
 // learn from @树残由尔
 .responsive-wrapper() {
@@ -415,12 +448,24 @@
   @media screen and (max-width: @unit * 13 + 20 - 1px) {
     font-size: @baseFontSize * (480/640); // 1.125em - 18px
   }
-  // (>=400px <480px) -> 400px
+  // (>=432px <480px) -> 432px
   @media screen and (max-width: @unit * 12 - 1px) {
+    font-size: @baseFontSize * (432/640); // 1.0125em - 16.2px
+  }
+  // (>=414px <432px) -> 414px
+  @media screen and (max-width: @unit * 10 + 32 - 1px) {
+    font-size: @baseFontSize * (414/640); // 0.9703125em - 15.525px
+  }
+  // (>=400px <414px) -> 400px
+  @media screen and (max-width: @unit * 10 + 14 - 1px) {
     font-size: @baseFontSize * (400/640); // 0.9375em - 15px
   }
-  // (>=360px <400px) -> 360px
+  // (>=375px <400px) -> 375px
   @media screen and (max-width: @unit * 10 - 1px) {
+    font-size: @baseFontSize * (375/640); // 0.87890625em - 14.0625px
+  }
+  // (>=360px <375px) -> 360px
+  @media screen and (max-width: @unit * 9 + 15 - 1px) {
     font-size: @baseFontSize * (360/640); // 0.84375em - 13.5px
   }
   // (<360px) -> 320px
@@ -468,4 +513,8 @@
   line-height: 0;*/
   border: @radius solid @color;
   border-radius: 50%;
+}
+
+.hide() {
+  display: none;
 }
