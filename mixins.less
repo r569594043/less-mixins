@@ -430,49 +430,101 @@
 // 
 // 魅族 MX3 432x720(598) dpr:2.5
 
+// // learn from @树残由尔
+// .responsive-wrapper() {
+//   // 1.5em = 24px
+//   @baseFontSize:24/16em;
+//   // unit width
+//   @unit:40px;
+//   // (>=640px) -> 640px
+//   @media screen and (min-width: @unit * 16px) {
+//     font-size: @baseFontSize; // 1.5em - 24px
+//   }
+//   // (>=540px <640px) -> 540px
+//   @media screen and (max-width: @unit * 16 - 1px) {
+//     font-size: @baseFontSize * (540/640); // 1.265625em - 20.25px
+//   }
+//   // (>=480px <540px) -> 480px
+//   @media screen and (max-width: @unit * 13 + 20 - 1px) {
+//     font-size: @baseFontSize * (480/640); // 1.125em - 18px
+//   }
+//   // (>=432px <480px) -> 432px
+//   @media screen and (max-width: @unit * 12 - 1px) {
+//     font-size: @baseFontSize * (432/640); // 1.0125em - 16.2px
+//   }
+//   // (>=414px <432px) -> 414px
+//   @media screen and (max-width: @unit * 10 + 32 - 1px) {
+//     font-size: @baseFontSize * (414/640); // 0.9703125em - 15.525px
+//   }
+//   // (>=400px <414px) -> 400px
+//   @media screen and (max-width: @unit * 10 + 14 - 1px) {
+//     font-size: @baseFontSize * (400/640); // 0.9375em - 15px
+//   }
+//   // (>=375px <400px) -> 375px
+//   @media screen and (max-width: @unit * 10 - 1px) {
+//     font-size: @baseFontSize * (375/640); // 0.87890625em - 14.0625px
+//   }
+//   // (>=360px <375px) -> 360px
+//   @media screen and (max-width: @unit * 9 + 15 - 1px) {
+//     font-size: @baseFontSize * (360/640); // 0.84375em - 13.5px
+//   }
+//   // (<360px) -> 320px
+//   @media screen and (max-width: @unit * 9 - 1px) { // ( ,400) - 320px
+//     font-size: @baseFontSize * (320/640); // 0.75em - 12px
+//   }
+// }
+
+
 // learn from @树残由尔
 .responsive-wrapper() {
   // 1.5em = 24px
   @baseFontSize:24/16em;
-  // unit width
-  @unit:40px;
   // (>=640px) -> 640px
-  @media screen and (min-width: @unit * 16px) {
+  @media screen and (min-width: 640px) {
     font-size: @baseFontSize; // 1.5em - 24px
   }
   // (>=540px <640px) -> 540px
-  @media screen and (max-width: @unit * 16 - 1px) {
+  @media screen and (max-width: (640 - 1px)) {
     font-size: @baseFontSize * (540/640); // 1.265625em - 20.25px
   }
   // (>=480px <540px) -> 480px
-  @media screen and (max-width: @unit * 13 + 20 - 1px) {
+  @media screen and (max-width: (540 - 1px)) {
     font-size: @baseFontSize * (480/640); // 1.125em - 18px
   }
   // (>=432px <480px) -> 432px
-  @media screen and (max-width: @unit * 12 - 1px) {
+  @media screen and (max-width: (480 - 1px)) {
     font-size: @baseFontSize * (432/640); // 1.0125em - 16.2px
   }
-  // (>=414px <432px) -> 414px
-  @media screen and (max-width: @unit * 10 + 32 - 1px) {
+  // (>=424px <432px) -> 424px
+  @media screen and (max-width: (432 - 1px)) {
+    font-size: @baseFontSize * (424/640); // 0.99375em - 15.9px
+  }
+  // (>=414px <424px) -> 414px
+  @media screen and (max-width: (424 - 1px)) {
     font-size: @baseFontSize * (414/640); // 0.9703125em - 15.525px
   }
   // (>=400px <414px) -> 400px
-  @media screen and (max-width: @unit * 10 + 14 - 1px) {
+  @media screen and (max-width: (414 - 1px)) {
     font-size: @baseFontSize * (400/640); // 0.9375em - 15px
   }
-  // (>=375px <400px) -> 375px
-  @media screen and (max-width: @unit * 10 - 1px) {
+  // (>=384px <400px) -> 384px
+  @media screen and (max-width: (400 - 1px)) {
+    font-size: @baseFontSize * (384/640); // 0.9em - 14.4px
+  }
+  // (>=375px <384px) -> 375px
+  @media screen and (max-width: (384 - 1px)) {
     font-size: @baseFontSize * (375/640); // 0.87890625em - 14.0625px
   }
   // (>=360px <375px) -> 360px
-  @media screen and (max-width: @unit * 9 + 15 - 1px) {
+  @media screen and (max-width: (375 - 1px)) {
     font-size: @baseFontSize * (360/640); // 0.84375em - 13.5px
   }
   // (<360px) -> 320px
-  @media screen and (max-width: @unit * 9 - 1px) { // ( ,400) - 320px
+  @media screen and (max-width: (360 - 1px)) { // ( ,400) - 320px
     font-size: @baseFontSize * (320/640); // 0.75em - 12px
   }
 }
+
 
 .arrow-base(@width) {
   .square(0);
